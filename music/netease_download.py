@@ -118,12 +118,7 @@ class NeteaseAPI():
 
 # test 
 NA = NeteaseAPI()
-# result = NA.login()
-# result = NA.singer()
-# result = NA.singer_details()
-# result = NA.album()
-# result = NA.singer_albums()
-id="29818028"
+id="1974443814"
 result = NA.song(id=id)
 result = NA.song_detail(id=id)
 
@@ -142,3 +137,13 @@ with open(id+'.lrc', 'w') as f:
     f.write(result.json()['lrc']['lyric'])
 
 result = NA.song_download(id=id,filename=id)
+
+
+url_base = "https://raw.githubusercontent.com/shaoyaoqian/images-1/main/music/"
+
+
+print("audio: \'"+url_base+id+".mp3\',")
+print("cover: \'"+url_base+id+".png\',")
+print("lrc: \'"+url_base+id+".lrc\',")
+print("name: \'"+song_name+'\',')
+print("artist: \'"+singer_name+'\',')
