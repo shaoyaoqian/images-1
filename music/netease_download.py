@@ -118,7 +118,7 @@ class NeteaseAPI():
 
 # test 
 NA = NeteaseAPI()
-id="10557"
+id="453927771"
 result = NA.song(id=id)
 result = NA.song_detail(id=id)
 
