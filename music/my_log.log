@@ -118,3 +118,10 @@
 2022-12-10 13:54:52.655 | INFO     | __main__:song_download:102 - url_song: http://m8.music.126.net/20221210141948/a15aff474fd9b97787dcbf7b5cf2bf45/ymusic/2580/6425/9111/f6648b66549e73462f9cacd5cef66789.mp3
 2022-12-10 13:54:52.655 | INFO     | __main__:song_download:103 - song_path: 453927771
 2022-12-10 13:54:53.627 | INFO     | __main__:song_download:115 - response.url: http://m8.music.126.net/20221210141948/a15aff474fd9b97787dcbf7b5cf2bf45/ymusic/2580/6425/9111/f6648b66549e73462f9cacd5cef66789.mp3
+2022-12-10 23:52:23.256 | INFO     | __main__:song:96 - response.url: https://netease.pengfeima.cn/song/url/v1?id=453927771&level=standard
+2022-12-10 23:52:25.717 | INFO     | __main__:song_detail:80 - response.url: https://netease.pengfeima.cn/song/detail?ids=453927771
+2022-12-10 23:52:27.857 | INFO     | __main__:song_lyric:71 - response.url: https://netease.pengfeima.cn/lyric?id=453927771
+2022-12-10 23:52:28.801 | INFO     | __main__:song:96 - response.url: https://netease.pengfeima.cn/song/url/v1?id=453927771&level=standard
+2022-12-10 23:52:28.802 | INFO     | __main__:song_download:102 - url_song: http://m7.music.126.net/20221211001722/3070b5e37e1a0b82bbce5b4b0bfd3d15/ymusic/2580/6425/9111/f6648b66549e73462f9cacd5cef66789.mp3
+2022-12-10 23:52:28.802 | INFO     | __main__:song_download:103 - song_path: 453927771
+2022-12-10 23:52:29.501 | INFO     | __main__:song_download:115 - response.url: http://m7.music.126.net/20221211001722/3070b5e37e1a0b82bbce5b4b0bfd3d15/ymusic/2580/6425/9111/f6648b66549e73462f9cacd5cef66789.mp3

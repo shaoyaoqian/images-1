@@ -1,67 +1,12 @@
 
 # 网易云爬虫，使用了NeteaseCloudMusicApi，文档参见：
 # https://neteasecloudmusicapi.vercel.app
-# 第三方API服务搭建在vercel上
 
 import requests
-import eyed3, time, random
 from loguru import logger
-
 logger.add('my_log.log')
-
-phone    = '15991859247'
-password = 'a12345'
 url_base = "https://netease.pengfeima.cn"
-
 class NeteaseAPI():
-    def login(self):
-        url = url_base+"/login/cellphone"
-        params = {
-            'phone': phone,
-            'password': password
-        }
-        response = requests.get(url,params=params)
-        logger.info("response.url: {}".format(response.url))
-        return response
-
-    def singer(self, id = "11972054"):
-        url = url_base + "/artist/desc"
-        params = {
-            'id':id
-        }
-        response = requests.get(url,params=params)
-        logger.info("response.url: {}".format(response.url))
-        return response
-
-    def singer_details(self, id = "11972054"):
-        url = url_base + "/artist/detail"
-        params = {
-            'id':id
-        }
-        response = requests.get(url,params=params)
-        logger.info("response.url: {}".format(response.url))
-        return response
-
-    def album(self, id = "32311"):
-        url = url_base + "/album"
-        params = {
-            'id':id
-        }
-        response = requests.get(url,params=params)
-        logger.info("response.url: {}".format(response.url))
-        return response
-
-    def singer_albums(self, id = "11972054", limit=5, offset=0):
-        url = url_base + "/artist/album"
-        params = {
-            'id':id,
-            'limit':limit,
-            'offset':offset
-        }
-        response = requests.get(url,params=params)
-        logger.info("response.url: {}".format(response.url))
-        return response
-
     def song_lyric(self, id = '436147423'):
         url = url_base + "/lyric"
         params = {
@@ -119,31 +64,31 @@ class NeteaseAPI():
 # test 
 NA = NeteaseAPI()
 id="453927771"
-result = NA.song(id=id)
-result = NA.song_detail(id=id)
 
+# 获取歌曲详细信息
+result = NA.song_detail(id=id)
 song_name = result.json()['songs'][0]['name']
 singer_name = result.json()['songs'][0]['ar'][0]['name']
-
 with open("-".join([id,song_name,singer_name])+'.txt', 'wb') as f:
     f.write(result.content)
 
+# 获取歌曲封面
 response = requests.get(result.json()['songs'][0]['al']['picUrl'])
 with open(id+'.png', 'wb') as f:
     f.write(response.content)
 
+# 获取歌词
 result = NA.song_lyric(id=id)
 with open(id+'.lrc', 'w') as f:
     f.write(result.json()['lrc']['lyric'])
 
+# 获取歌曲音频
 result = NA.song_download(id=id,filename=id)
 
-
+# 返回我们需要的格式
 url_base = "https://raw.githubusercontent.com/shaoyaoqian/images-1/main/music/"
-
-
-print("audio: \'"+url_base+id+".mp3\',")
-print("cover: \'"+url_base+id+".png\',")
-print("lrc: \'"+url_base+id+".lrc\',")
-print("name: \'"+song_name+'\',')
-print("artist: \'"+singer_name+'\',')
+print("audio=\'"+url_base+id+".mp3\',")
+print("cover=\'"+url_base+id+".png\',")
+print("lrc=\'"+url_base+id+".lrc\',")
+print("name=\'"+song_name+'\',')
+print("artist=\'"+singer_name+'\',')
