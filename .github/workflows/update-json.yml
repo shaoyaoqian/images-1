@@ -3,7 +3,8 @@ name: Generator
 on:
   schedule:
     - cron: '0 0 * * *'
-  branches:
+  push:
+    branches:
       - main
   workflow_dispatch:
 
