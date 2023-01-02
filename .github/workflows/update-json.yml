@@ -24,11 +24,12 @@ jobs:
         cd json
         pip install -r requirements.txt
         python a.py
+  
     - name: Commit & Push
       uses: action-x/commit@v2.9
       with:
         github-token: ${{ secrets.GITHUB_TOKEN }}
-        push-branch: 'output'
+        push-branch: 'main'
         force-push: 'true'
         commit-message: 'Generate Json'
         name: github-actions[bot]
