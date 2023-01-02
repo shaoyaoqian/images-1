@@ -51,7 +51,7 @@ def fetch_friends():
 def fetch_fcircles():
     url_base = "https://raw.githubusercontent.com/{owner:s}/{repository:s}/{branch:s}/data.json"
     url = url_base.format(owner=GITHUB_OWNER, repository="hexo-circle-of-friends", branch="main")
-    file_base = "json/fcircles_{owner:s}_{repository:s}.json"
+    file_base = "fcircles_{owner:s}_{repository:s}.json"
     file = file_base.format(owner=GITHUB_OWNER, repository=GITHUB_REPOSITORY)
     response = requests.get(url, timeout=TIMEOUT)
     with open(file, "wb") as f:
