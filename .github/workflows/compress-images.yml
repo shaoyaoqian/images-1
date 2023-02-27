@@ -1,0 +1,36 @@
+name: Compress pictures
+
+on:
+  schedule:
+    - cron: '0 0 * * *'
+  # push:
+  #   branches:
+  #     - main
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout
+      uses: actions/checkout@master
+    - name: Set up Python #安装python
+      uses: actions/setup-python@v1
+      with:
+        python-version: 3.8
+
+    - name: Compress
+      run: |
+        cd images
+        pip install pillow
+        python compress.py
+  
+    - name: Commit & Push
+      uses: action-x/commit@v2.9
+      with:
+        github-token: ${{ secrets.GITHUB_TOKEN }}
+        push-branch: 'main'
+        force-push: 'true'
+        commit-message: 'Generate Json'
+        name: github-actions[bot]
+        email: github-actions[bot]@noreply.github.com
