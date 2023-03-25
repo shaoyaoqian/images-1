@@ -2,6 +2,12 @@
   "version": "v2",
   "content": [
     {
+      "title": "宿雾",
+      "avatar": "https://gcore.jsdelivr.net/gh/panoshu/blog-cdn/site/avatar/avatar.webp",
+      "url": "https://www.panoshu.top",
+      "screenshot": "https://gcore.jsdelivr.net/gh/panoshu/blog-cdn/site/screenshots/panoshu.top.png"
+    },
+    {
       "title": "tw93",
       "url": "http://weekly.tw93.fun/",
       "avatar": "",
