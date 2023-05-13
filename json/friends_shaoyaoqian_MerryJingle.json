@@ -2,6 +2,13 @@
   "version": "v2",
   "content": [
     {
+      "title": "Felix Chen",
+      "url": "https://blog.snowflake.zone/",
+      "avatar": "https://blog.snowflake.zone/assets/profile.jpg",
+      "screenshot": "",
+      "description": "所见一切皆是奇迹。"
+    },
+    {
       "title": "宿雾",
       "avatar": "https://gcore.jsdelivr.net/gh/panoshu/blog-cdn/site/avatar/avatar.webp",
       "url": "https://www.panoshu.top",
@@ -62,13 +69,6 @@
       "avatar": "https://iiiimage.oss-cn-beijing.aliyuncs.com/img/202211182157526.jpg",
       "screenshot": "",
       "description": "片刻得意春风"
-    },
-    {
-      "title": "Felix Chen",
-      "url": "https://blog.felixchen0707.cn/",
-      "avatar": "https://i.imgtg.com/2022/06/06/n3ORs.jpg",
-      "screenshot": "",
-      "description": "所见一切皆是奇迹。"
     },
     {
       "title": "xaoxuu",
