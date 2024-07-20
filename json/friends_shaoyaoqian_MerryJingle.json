@@ -2,6 +2,26 @@
   "version": "v2",
   "content": [
     {
+      "title": "SkyReeves",
+      "url": "https://skyreeves.com/",
+      "avatar": "https://img.skyreeves.com/main/avatar96.gif",
+      "screenshot": "https://img.skyreeves.com/sites/截屏2022-11-07-19.23.28.png"
+    },
+    {
+      "title": "CAYZLH",
+      "url": "https://www.cayzlh.com",
+      "avatar": "https://www.cayzlh.com/avatar.svg",
+      "screenshot": "https://jsd.cdn.zzko.cn/gh/cayzlh/git-img-repository@master/uPic/0l3N8t.png",
+      "description": "CODE IS POETRY"
+    },
+    {
+      "title": "tw93",
+      "url": "http://weekly.tw93.fun/",
+      "avatar": "https://githubimages.pengfeima.cn/images/image-20240720180207243.png",
+      "screenshot": "",
+      "description": ""
+    },
+    {
       "title": "Felix Chen",
       "url": "https://blog.snowflake.zone/",
       "avatar": "https://blog.snowflake.zone/assets/profile.jpg",
@@ -13,13 +33,6 @@
       "avatar": "https://gcore.jsdelivr.net/gh/panoshu/blog-cdn/site/avatar/avatar.webp",
       "url": "https://www.panoshu.top",
       "screenshot": "https://gcore.jsdelivr.net/gh/panoshu/blog-cdn/site/screenshots/panoshu.top.png"
-    },
-    {
-      "title": "tw93",
-      "url": "http://weekly.tw93.fun/",
-      "avatar": "",
-      "screenshot": "",
-      "description": ""
     },
     {
       "title": "Shixiaocaia",
@@ -34,13 +47,6 @@
       "avatar": "https://cdn.dusays.com/avatar.png",
       "screenshot": "https://bu.dusays.com/2022/05/21/6287d1dae7bb9.jpg",
       "description": ""
-    },
-    {
-      "title": "CAYZLH",
-      "url": "https://www/cayzlh.com",
-      "avatar": "https://jsd.cdn.zzko.cn/gh/cayzlh/psychic-potato@master/image/shark.jpg",
-      "screenshot": "https://jsd.cdn.zzko.cn/gh/cayzlh/git-img-repository@master/uPic/0l3N8t.png",
-      "description": "CODE IS POETRY"
     },
     {
       "title": "是非题",
