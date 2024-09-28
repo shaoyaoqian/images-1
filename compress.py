@@ -4,7 +4,7 @@ import os
 
 # 源文件
 origin_directory = './images'
-output_directory = './images/compressed'
+output_directory = './compressed'
 max_width = 1080
 
 #获取文件夹里面的图片
@@ -18,7 +18,7 @@ for file_path in existed_path_list:
     compress_file_list.append(file_name_without_ext)
 
 
-def reduce_image_quality(infile, mb=102400, step=3, quality=80):
+def reduce_image_quality(infile, mb=10002400, step=3, quality=80):
     """不改变图片尺寸压缩到指定大小
     :param infile: 压缩源文件
     :param mb: 压缩目标(B)默认100K
