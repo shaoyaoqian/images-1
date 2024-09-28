@@ -3,12 +3,20 @@ from PIL import Image
 import os
 
 # 源文件
-origin_directory = '.'
-output_directory = './compressed'
+origin_directory = './images'
+output_directory = './images/compressed'
 max_width = 1080
 
 #获取文件夹里面的图片
 path_list=[origin_directory + "/" + i for i in os.listdir(origin_directory)]
+
+compress_file_list = []
+existed_path_list=[output_directory + "/" + i for i in os.listdir(output_directory)]
+for file_path in existed_path_list:
+    file_name = os.path.basename(file_path)
+    file_name_without_ext = os.path.splitext(file_name)[0]
+    compress_file_list.append(file_name_without_ext)
+
 
 def reduce_image_quality(infile, mb=102400, step=3, quality=80):
     """不改变图片尺寸压缩到指定大小
@@ -36,6 +44,12 @@ def reduce_image_quality(infile, mb=102400, step=3, quality=80):
 
 #循环图片路径，依次对图片进行压缩
 for file_input in path_list:
+    file_name = os.path.basename(file_input)
+    file_name_without_ext = os.path.splitext(file_name)[0]
+    if file_name_without_ext in compress_file_list:
+        print(f"{file_name_without_ext}已经压缩过了")
+        continue
+    print(f"{file_input}开始压缩")
     file   = file_input.split("/")[-1]
     filename, format_in = (file.split(".")[0], file.split(".")[-1])
     format_out = 'webp'

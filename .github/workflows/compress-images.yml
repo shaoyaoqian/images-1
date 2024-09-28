@@ -3,9 +3,9 @@ name: Compress pictures
 on:
   schedule:
     - cron: '0 0 * * *'
-  # push:
-  #   branches:
-  #     - main
+  push:
+    branches:
+      - main
   workflow_dispatch:
 
 jobs:
@@ -21,7 +21,6 @@ jobs:
 
     - name: Compress
       run: |
-        cd images
         pip install pillow
         python compress.py
   
@@ -31,6 +30,6 @@ jobs:
         github-token: ${{ secrets.GITHUB_TOKEN }}
         push-branch: 'main'
         force-push: 'true'
-        commit-message: 'Generate Json'
+        commit-message: 'Compress images'
         name: github-actions[bot]
         email: github-actions[bot]@noreply.github.com
