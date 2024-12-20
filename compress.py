@@ -4,7 +4,7 @@ import os
 
 # 源文件
 origin_directory = './images'
-output_directory = './compressed'
+output_directory = './images/compressed'
 max_width = 1080
 
 #获取文件夹里面的图片
