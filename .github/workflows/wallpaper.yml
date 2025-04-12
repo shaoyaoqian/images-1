@@ -1,37 +1,37 @@
-name: Download wallpapers
+# name: Download wallpapers
 
-on:
-#   schedule:
-#     - cron: '0 0 * * *'
-  # push:
-    # branches:
-    #   - main
-  workflow_dispatch:
+# on:
+# #   schedule:
+# #     - cron: '0 0 * * *'
+#   # push:
+#     # branches:
+#     #   - main
+#   workflow_dispatch:
 
-jobs:
-  build:
-    runs-on: ubuntu-latest
-    steps:
-    - name: Checkout
-      uses: actions/checkout@master
-    - name: Set up Python #安装python
-      uses: actions/setup-python@v1
-      with:
-        python-version: 3.13.2
+# jobs:
+#   build:
+#     runs-on: ubuntu-latest
+#     steps:
+#     - name: Checkout
+#       uses: actions/checkout@master
+#     - name: Set up Python #安装python
+#       uses: actions/setup-python@v1
+#       with:
+#         python-version: 3.13.2
 
-    - name: Download wallpapers #更新
-      run: |
-        pip install beautifulsoup4
-        pip install requests
-        cd 必应壁纸
-        python3 WallPaperGetter.py
+#     - name: Download wallpapers #更新
+#       run: |
+#         pip install beautifulsoup4
+#         pip install requests
+#         cd 必应壁纸
+#         python3 WallPaperGetter.py
   
-    - name: Commit & Push
-      uses: action-x/commit@v2.9
-      with:
-        github-token: ${{ secrets.GITHUB_TOKEN }}
-        push-branch: 'main'
-        force-push: 'true'
-        commit-message: 'Download wallpapers'
-        name: github-actions[bot]
-        email: github-actions[bot]@noreply.github.com
+#     - name: Commit & Push
+#       uses: action-x/commit@v2.9
+#       with:
+#         github-token: ${{ secrets.GITHUB_TOKEN }}
+#         push-branch: 'main'
+#         force-push: 'true'
+#         commit-message: 'Download wallpapers'
+#         name: github-actions[bot]
+#         email: github-actions[bot]@noreply.github.com
