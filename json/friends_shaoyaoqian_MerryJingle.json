@@ -56,18 +56,18 @@
       "description": "记录生活，热爱跑步，学习 FPGA 中"
     },
     {
-      "title": "Cubik的小站",
-      "url": "https://cubik65536.top/",
-      "avatar": "https://img.cubik65536.top/CubikLogo.png",
-      "screenshot": "https://img.cubik65536.top/cubik65536-top-screenshot.png",
-      "description": "RECOMMENDED BY DR.CREATIVE"
-    },
-    {
       "title": "Circuit",
       "url": "https://yang000.cn",
       "avatar": "https://iiiimage.oss-cn-beijing.aliyuncs.com/img/202211182157526.jpg",
       "screenshot": "",
       "description": "片刻得意春风"
+    },
+    {
+    "title": "Qubik的小站",
+    "url": "https://www.qubik65536.top",
+    "avatar": "https://assets.qubik.top/logo.png",
+    "screenshot": "",
+    "description": "Recommended by Dr.Creative."
     },
     {
       "title": "xaoxuu",
